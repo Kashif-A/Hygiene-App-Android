@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context="com.example.Hygienic.MainActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/back3"
+        android:src="@drawable/back3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/postcodeRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:buttonTint="@color/colorBlue"
+                android:text="@string/searchByPostcode"
+                android:textStyle="bold|italic" />
+
+            <RadioButton
+                android:id="@+id/businessnameRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:buttonTint="@color/colorBlue"
+                android:text="@string/searchByName"
+                android:textStyle="bold|italic" />
+
+            <RadioButton
+                android:id="@+id/locationRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/colorWhite"
+                android:buttonTint="@color/colorBlue"
+                android:text="@string/searchByLocation"
+                android:textStyle="bold|italic" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/searchLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:autofillHints="@string/editTextLabel"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:ignore="LabelFor"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="4dp"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="113dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="@string/search"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/currentLocationButton"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="55dp"
+                android:layout_weight="1"
+                android:paddingTop="14dp"
+                android:contentDescription="@string/currentLocation"
+                app:srcCompat="@drawable/location" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mostRecentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mostRecent"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="@string/mostRecent"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.mapbox.mapboxsdk.maps.MapView>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/toggleView"
+        android:layout_width="46dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/toggle"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

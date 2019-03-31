@@ -1,0 +1,14 @@
+<resources>
+    <string name="mapbox_api_key">pk.eyJ1Ijoia2FzaDk5OWkiLCJhIjoiY2pybWxidWlzMGl4dzQ1cGpxZHgzbHk4aSJ9.4eonp6hQh1PRV3mMPh3lJg</string>
+    <string name="search">Search</string>
+    <string name="toggle">Toggle View</string>
+    <string name="searchByPostcode">Search By Postcode</string>
+    <string name="searchByName">Search By Name</string>
+    <string name="searchByLocation">Search By Location</string>
+    <string name="currentLocation">Current Location</string>
+    <string name="mostRecent">Show Most Recent</string>
+    <string name="editTextLabel">User Input Field</string>
+    <string name="divider">Divider</string>
+    <string name="ratingImage">Rating Image</string>
+    <string name="nameOfApp">Hygienic</string>
+</resources>
